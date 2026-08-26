@@ -419,9 +419,6 @@ Digital Circuits AI can be useful for:
 Potential future improvements include:
 
 * Automatic logic-gate diagram generation
-* Truth-table generation
-* Boolean expression simplification
-* Karnaugh map generation
 * More supported logic gates such as NAND, NOR, and XNOR
 * Circuit simulation
 * Interactive gate placement
