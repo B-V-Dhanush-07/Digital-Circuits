@@ -1,12 +1,12 @@
 # Digital Circuits AI
 
-An AI-powered digital logic circuit assistant that converts natural-language circuit requirements into structured Boolean logic expressions and variable mappings.
+An AI-powered digital logic circuit assistant that converts natural-language circuit requirements and circuit/problem images into structured Boolean logic expressions and variable mappings.
 
 ## Overview
 
-**Digital Circuits AI** is an interactive web application designed to help students, learners, and digital-logic enthusiasts solve Boolean logic and circuit-design problems using natural language.
+**Digital Circuits AI** is an interactive web application designed to help students, learners, and digital-logic enthusiasts solve Boolean logic and circuit-design problems using natural language and images.
 
-Instead of manually translating a problem statement into a Boolean expression, users can describe the required logic and let the application analyze the problem using **Google Gemini 2.5 Flash**.
+Instead of manually translating a problem statement into a Boolean expression, users can describe the required logic using natural language or provide an image containing a digital logic problem or circuit. The application analyzes the input using **Google Gemini 2.5 Flash**.
 
 The application supports multimodal input, allowing users to provide a problem through:
 
@@ -37,15 +37,25 @@ For example:
 
 The AI can convert this requirement into a structured Boolean representation.
 
+### Image Processing
+
+Users can provide images containing digital logic problems, circuit diagrams, or other relevant visual information.
+
+The image is processed by the AI model to understand the logical requirements and generate the corresponding Boolean representation.
+
+This allows users to solve circuit problems without manually transcribing the information from an image.
+
 ### Multimodal Input
 
-The backend supports multiple types of input:
+The application combines natural-language processing and image processing to analyze digital logic problems from different types of input.
 
-* Text prompts
-* Image-based circuit/problem descriptions
-* Audio input
+Users can provide:
 
-This makes the application useful for problems presented in different formats.
+* Text-based circuit requirements
+* Images of circuit diagrams
+* Images containing digital logic problem statements
+
+The AI processes the provided input and generates a structured Boolean representation.
 
 ### Structured Boolean Expressions
 
@@ -102,7 +112,7 @@ The application follows a simple frontend-to-serverless-AI architecture:
 ```text
 User
  │
- │ Text / Image / Audio
+ │ Text / Image
  ▼
 Web Interface
  │
@@ -159,7 +169,7 @@ Responsibilities include:
 
 * Accepting POST requests
 * Reading user prompts
-* Processing optional image and audio input
+* Processing optional image input
 * Sending multimodal requests to Gemini
 * Enforcing the Boolean-expression format
 * Parsing the AI response
@@ -233,7 +243,7 @@ The application exposes the AI generation function through:
 POST /api/generate
 ```
 
-The endpoint accepts a JSON request containing a prompt and optional multimodal data.
+The endpoint accepts a JSON request containing a prompt and optional image data.
 
 Example request structure:
 
@@ -245,7 +255,7 @@ Example request structure:
 }
 ```
 
-Only the prompt is required.
+Only the prompt is required when using text input. Image data can be provided when processing an image-based problem.
 
 ---
 
@@ -281,7 +291,7 @@ Only the prompt is required.
 ### 1. Clone the repository
 
 ```bash
-git clone <https://github.com/B-V-Dhanush-07/Digital-Circuits>
+git clone https://github.com/B-V-Dhanush-07/Digital-Circuits.git
 cd Digital-Circuits
 ```
 
@@ -396,6 +406,7 @@ Digital Circuits AI can be useful for:
 * Logic circuit design
 * Learning AND, OR, NOT, and XOR operations
 * Converting natural-language requirements into Boolean expressions
+* Analyzing digital logic problems from images
 * Understanding digital logic problems
 * Experimenting with AI-assisted circuit design
 
@@ -423,7 +434,7 @@ Potential future improvements include:
 
 **Active Development**
 
-Digital Circuits AI is an experimental AI-assisted digital logic tool focused on making Boolean logic and circuit design more accessible through natural-language interaction.
+Digital Circuits AI is an experimental AI-assisted digital logic tool focused on making Boolean logic and circuit design more accessible through **natural-language processing and image-based problem analysis**.
 
 ---
 
@@ -432,3 +443,4 @@ Digital Circuits AI is an experimental AI-assisted digital logic tool focused on
 This project is licensed under the **MIT License**.
 
 See the [LICENSE](LICENSE) file for the full license text.
+
