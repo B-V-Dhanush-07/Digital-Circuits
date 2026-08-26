@@ -1,5 +1,7 @@
 # Digital Circuits AI
 
+[🌐 Live Website](https://digital-circuits.netlify.app/)
+
 An AI-powered digital logic circuit assistant that converts natural-language circuit requirements and circuit/problem images into structured Boolean logic expressions and variable mappings.
 
 ## Overview
