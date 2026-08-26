@@ -241,7 +241,6 @@ Example request structure:
 {
   "prompt": "Design a circuit where the output is active when A and B are active.",
   "imageBase64": "...",
-  "audioBase64": "...",
   "mimeType": "image/jpeg"
 }
 ```
@@ -430,6 +429,6 @@ Digital Circuits AI is an experimental AI-assisted digital logic tool focused on
 
 ## License
 
-This project currently does not specify a dedicated open-source license.
+This project is licensed under the **MIT License**.
 
-If you intend to publish the repository publicly, consider adding an appropriate license such as the MIT License.
+See the [LICENSE](LICENSE) file for the full license text.
